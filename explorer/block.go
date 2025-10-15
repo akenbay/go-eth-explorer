@@ -28,3 +28,14 @@ func fetchBlock(client *ethclient.Client, arg string) (*types.Block, error) {
 	block, err := client.BlockByNumber(ctx, big.NewInt(num))
 	return block, nil
 }
+
+func printBlock(block *types.Block) {
+	fmt.Println("--------------------------------------------------")
+	fmt.Printf("Block Number: %v\n", block.Number())
+	fmt.Printf("Hash: %s\n", block.Hash())
+	fmt.Printf("Parent Hash: %s\n", block.ParentHash())
+	fmt.Printf("Miner: %s\n", block.Coinbase())
+	fmt.Printf("Gas Used: %d\n", block.GasUsed())
+	fmt.Printf("Transactions: %d\n", len(block.Transactions()))
+	fmt.Println("--------------------------------------------------")
+}
