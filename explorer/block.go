@@ -29,7 +29,7 @@ func fetchBlock(client *ethclient.Client, arg string) (*types.Block, error) {
 	return block, nil
 }
 
-func printBlock(block *types.Block) {
+func PrintBlock(block *types.Block) {
 	fmt.Println("--------------------------------------------------")
 	fmt.Printf("Block Number: %v\n", block.Number())
 	fmt.Printf("Hash: %s\n", block.Hash())
