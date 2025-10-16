@@ -10,7 +10,7 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
-func fetchBlock(client *ethclient.Client, arg string) (*types.Block, error) {
+func FetchBlock(client *ethclient.Client, arg string) (*types.Block, error) {
 	ctx := context.Background()
 	if arg == "latest" {
 		block, err := client.BlockByNumber(ctx, nil)
