@@ -13,7 +13,8 @@ func main() {
 	arg := flag.String("arg", "latest", "argument for command: latest or block number")
 	flag.Parse()
 
-	client, err := explorer.NewClient("https://cloudflare-eth.com")
+	url := os.Getenv("ETH_API")
+	client, err := explorer.NewClient(url)
 	if err != nil {
 		slog.Error("Error when creating new eth client:", "error", err)
 		os.Exit(1)
