@@ -14,9 +14,9 @@ go-eth-explorer/
 ├── explorer/
 │   ├── client.go
 │   ├── block.go
-│   ├── tx.go
-│   └── utils.go
+│   └── tx.go
 ├── go.mod
+├── go.sum
 ├── .env.example
 └── README.md
 
