@@ -5,18 +5,22 @@ Designed to learn and demonstrate how to interact with the net with go-ethereum 
 
 It connects to any Ethereum RPC endpoint and gets information about specific or latest block (block number, hash, parent hash, miner, gas used and number of transactions). It also can inspect latest 10 transactions of specific or latest block.
 
-## Structure
+## 🧱 Project Structure
+
+```
 
 go-eth-explorer/
 ├── main.go
 ├── explorer/
-│ ├── client.go
-│ ├── block.go
-│ └── tx.go
+│   ├── client.go
+│   ├── block.go
+│   ├── tx.go
+│   └── utils.go
 ├── go.mod
-├── go.sum
 ├── .env.example
 └── README.md
+
+```
 
 ## Installation
 
